@@ -1,0 +1,10 @@
+CREATE SCHEMA `article` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+use article;
+create table article(
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT '主键',
+  title VARCHAR(255) NOT NULL DEFAULT '' COMMENT '文章title',
+  `desc` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '文章简介',
+  link VARCHAR(255) NOT NULL DEFAULT '' COMMENT '链接地址',
+  tag VARCHAR(20) NOT NULL DEFAULT '' COMMENT '文章标签',
+  updatetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '时间戳'
+);
